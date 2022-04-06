@@ -2,22 +2,26 @@ package com.company;
 
 import java.util.Scanner;
 
-public class exercicio3 {
+class exercicio3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("DIGITE A LETRA F OU M: ");
         String letra = scanner.nextLine();
         Boolean LetraInformadaMasculinoLetraMaiuscula = letra.equals("M");
-        if (LetraInformadaMasculinoLetraMaiuscula)
-            System.out.println("A RESPOSTA EM RELACAO A LETRA DIGITADA É MASCOLINO!");
+        Boolean LetraInformadaFemininoLetraMaiuscula = letra.equals("F");
         Boolean LetraInformadaMasculinoLetraMinuscula = letra.equals("m");
-        if (LetraInformadaMasculinoLetraMinuscula)
-            System.out.println("A RESPOSTA EM RELACAO A LETRA DIGITADA É MASCOLINO!");
-        boolean LetraInformadaFemininoLetraMaiuscula = letra.equals("F");
-        if (LetraInformadaFemininoLetraMaiuscula)
+        Boolean LetraInformadaFemininoLetraMinusculo = letra.equals("f");
+        if (LetraInformadaMasculinoLetraMaiuscula) {
+            System.out.println("A RESPOSTA EM RELACAO A LETRA DIGITADA É MASCULINO!");
+        } else if (LetraInformadaMasculinoLetraMinuscula) {
+            System.out.println("A RESPOSTA EM RELACAO A LETRA DIGITADA É MASCULINO!");
+        } else if (LetraInformadaFemininoLetraMaiuscula) {
             System.out.println("A RESPOSTA EM RELACAO A LETRA DIGITADA É FEMININO!");
-        boolean LetraInformadaFemininoLetraMinuscula = letra.equals("f");
-        if (LetraInformadaFemininoLetraMinuscula)
+        } else if (LetraInformadaFemininoLetraMinusculo) {
             System.out.println("A RESPOSTA EM RELACAO A LETRA DIGITADA É FEMININO!");
+        } else {
+            System.out.println("Invalido");
+        }
+        scanner.close();
     }
 }
